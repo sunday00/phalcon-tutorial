@@ -11,9 +11,9 @@ return new \Phalcon\Config([
     'database' => [
         'adapter'     => 'Mysql',
         'host'        => 'localhost',
-        'username'    => 'sunday00',
-        'password'    => 'zktm500cc',
-        'dbname'      => 'phalcone_vote',
+        'username'    => '',
+        'password'    => '',
+        'dbname'      => '',
         'charset'     => 'utf8',
     ],
     'application' => [
