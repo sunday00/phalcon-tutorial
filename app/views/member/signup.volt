@@ -3,7 +3,7 @@
 <html>
     <div class="mt-5">
         <h1>Sign Up</h1>
-        {{ form( "signup/register", 'class': 'form mt-3', 'method': 'post' ) }}
+        {{ form( "member/signup", 'class': 'form mt-3', 'method': 'post' ) }}
             <div class="form-group">
                 <p>
                     <label for="name">Name</label>
