@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// use Services\MemberService;
+use App\Services\MemberService;
 
 class MemberController extends \Phalcon\Mvc\Controller
 {
@@ -36,5 +36,9 @@ class MemberController extends \Phalcon\Mvc\Controller
 
     }
 
+    public function testAction()
+    {
+        MemberService::test();
+    }
 }
 

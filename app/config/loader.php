@@ -14,6 +14,6 @@ $loader->registerDirs(
 
 $loader->registerNamespaces(
     [
-       'Services'         => 'app/services',
+       'App\Services'       => $config->application->servicesDir,
     ]
 )->register();

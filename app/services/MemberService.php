@@ -1,14 +1,13 @@
 <?php
 
-namespace Services;
+namespace App\Services;
 
 class MemberService
 {
 
     public function test()
     {
-        var_dump("test");
-        exit;
+        echo "HIHIHIHI test HIHIHIHIHI";
     }
 
     
