@@ -2,14 +2,16 @@
 
 namespace App\Services;
 
+use App\Models\Users;
+
 class MemberService
 {
 
     private Users $user;
     
-    public function initialize()
+    public function __construct()
     {
-        $this->$user = new Users();
+        $this->user = new Users();
     }
 
     public function test()
@@ -19,11 +21,10 @@ class MemberService
     
     public function save($req)
     {
-        var_dump($user);
-        exit;
-        $success = $user->save($req->getPost(), [
-            "name", "email"
-        ]);
+        $this->user->name = $req->getPost("name");
+        $this->user->email = $req->getPost("email");
+
+        $success = $this->user->save();
 
         if ($success) {
             echo "registered";
