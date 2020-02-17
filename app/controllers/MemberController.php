@@ -5,32 +5,38 @@ use App\Services\MemberService;
 
 class MemberController extends \Phalcon\Mvc\Controller
 {
+    private MemberService $service;
+
+    public function initialize() {
+        $this->service = new MemberService();
+    }
+
     public function signupAction()
     {
         if (  $this->request->isPost()  ){
 
             
-            $user = new Users();
+            // $user = new Users();
             
-            // $success = $user->save($this->request->getPost(), null, [
-            //     "name", "email"
-            // ]);
+            // // $success = $user->save($this->request->getPost(), null, [
+            // //     "name", "email"
+            // // ]);
 
-            $user->name = $this->request->getPost("name");
-            $user->email = $this->request->getPost("email");
+            // $user->name = $this->request->getPost("name");
+            // $user->email = $this->request->getPost("email");
 
-            $success = $user->save();
+            // $success = $user->save();
 
-            if ($success) {
-                echo "registered";
-            } else {
-                echo "sorry <br />";
+            // if ($success) {
+            //     echo "registered";
+            // } else {
+            //     echo "sorry <br />";
 
-                foreach( $user->getMessages() as $message){
-                    echo $message->getMessage(), "<br />";
-                }
-            }
-
+            //     foreach( $user->getMessages() as $message){
+            //         echo $message->getMessage(), "<br />";
+            //     }
+            // }
+            $this->service->save($this->request);
             $this->view->disable();
         }
 
