@@ -2,29 +2,38 @@
 
 namespace App\Services;
 
+use App\Models\Users;
+
 class MemberService
 {
+
+    private Users $user;
+    
+    public function __construct()
+    {
+        $this->user = new Users();
+    }
 
     public function test()
     {
         echo "HIHIHIHI test HIHIHIHIHI";
     }
-
     
     public function save($req)
     {
-        // $success = $user->save($req->getPost(), [
-        //     "name", "email"
-        // ]);
+        $this->user->name = $req->getPost("name");
+        $this->user->email = $req->getPost("email");
 
-        // if ($success) {
-        //     echo "registered";
-        // } else {
-        //     echo "sorry";
+        $success = $this->user->save();
 
-        //     foreach( $this->getMessage() as $message){
-        //         echo $message->getMessage(), "<br />";
-        //     }
-        // }
+        if ($success) {
+            echo "registered";
+        } else {
+            echo "sorry";
+
+            foreach( $this->getMessage() as $message){
+                echo $message->getMessage(), "<br />";
+            }
+        }
     }
 }
