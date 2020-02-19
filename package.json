@@ -1,0 +1,23 @@
+{
+  "name": "tuto",
+  "version": "1.0.0",
+  "description": "- hello",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunday00/phalcon-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunday00/phalcon-tutorial/issues"
+  },
+  "homepage": "https://github.com/sunday00/phalcon-tutorial#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.1"
+  }
+}
