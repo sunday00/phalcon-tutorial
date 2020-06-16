@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Open Files" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4d3ad825-1e6f-45b5-a7a9-7f75682d7ef5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +45,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -73,7 +77,7 @@
       <workItem from="1592123313021" duration="2520000" />
       <workItem from="1592154025282" duration="49000" />
       <workItem from="1592154088532" duration="2390000" />
-      <workItem from="1592234528214" duration="9844000" />
+      <workItem from="1592234528214" duration="13975000" />
     </task>
     <servers />
   </component>
@@ -89,21 +93,29 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="417" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1592152634586" />
-    <state x="521" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1592236562264">
+    <state x="521" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1592307553750">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="521" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1592236562264" />
+    <state x="521" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1592307553750" />
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592245547667">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1592245547667" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1592156128840">
+    <state x="420" y="273" key="NewPhpClassDialog" timestamp="1592306178561">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1592156128840" />
+    <state x="420" y="273" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1592306178561" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1592307123591">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1592307123591" />
     <state x="397" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1592234571709">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="397" y="284" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1592234571709" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1592306585461">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1592306585461" />
   </component>
 </project>

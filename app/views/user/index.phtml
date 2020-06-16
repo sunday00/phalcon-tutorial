@@ -1,0 +1,10 @@
+<h1>Hello user...</h1>
+
+<h2>Now on <?=$count?></h2>
+<?php if (property_exists($one, 'id')) : ?>
+    <?=$one->id?> : <?=$one->email?>
+<?php endif; ?>
+<hr />
+<?php foreach ($all as $item) : ?>
+    <p><?=$item->email?></p>
+<?php endforeach; ?>
