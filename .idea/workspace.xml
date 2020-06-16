@@ -39,6 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/config" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,6 +49,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/views/layouts" />
     </key>
@@ -77,7 +81,7 @@
       <workItem from="1592123313021" duration="2520000" />
       <workItem from="1592154025282" duration="49000" />
       <workItem from="1592154088532" duration="2390000" />
-      <workItem from="1592234528214" duration="21251000" />
+      <workItem from="1592234528214" duration="21484000" />
     </task>
     <servers />
   </component>
