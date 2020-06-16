@@ -26,5 +26,14 @@ return new \Phalcon\Config([
         'libraryDir'     => APP_PATH . '/library/',
         'cacheDir'       => BASE_PATH . '/cache/',
         'baseUri'        => '/',
+    ],
+    'modelsMetadata' => [
+        "host"       => "127.0.0.1",
+        "port"       => 6379,
+        "persistent" => 0,
+        'auth' => 'Zktm500CC!',
+        "statsKey"   => "_PHCM_MM",
+        "lifetime"   => 172800,
+        "index"      => 2,
     ]
 ]);

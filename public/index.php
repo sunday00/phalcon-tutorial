@@ -2,6 +2,8 @@
 declare(strict_types=1);
 
 use Phalcon\Di\FactoryDefault;
+use Phalcon\Cache\AdapterFactory;
+use Phalcon\Mvc\Model\MetaData\Redis;
 
 error_reporting(E_ALL);
 
@@ -29,6 +31,19 @@ try {
      * Get config service for use in inline setup below
      */
     $config = $di->getConfig();
+
+
+    /**
+     * models metadata using redis
+     */
+    $di['modelsMetadata'] = function () use ( $config ) {
+        // Create a metadata manager with Redis
+        $metadata = new Redis( new AdapterFactory,
+            $config->modelsMetadata->toArray()
+        );
+
+        return $metadata;
+    };
 
     /**
      * Include Autoloader
