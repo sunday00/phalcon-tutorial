@@ -101,4 +101,21 @@ class User extends \Phalcon\Mvc\Model
     {
         // TODO: Implement reset() method.
     }
+
+    public function beforeCreate()
+    {
+        $this->created_at = date('Y-m-d H:i:s');
+    }
+
+    public function beforeUpdate()
+    {
+        $this->updated_at = date('Y-m-d H:i:s');
+    }
+
+    public function beforeValidationOnCreate ()
+    {
+        if ( preg_match("/test\w+\@[a-z]+\.\w{3,5}/", $this->email, $match)) {
+            die('do not use test!');
+        }
+    }
 }

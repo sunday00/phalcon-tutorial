@@ -27,13 +27,13 @@ class UserController extends ControllerBase
 
     public function updateAction()
     {
-        $user = User::findFirst();
+        $user = User::findFirst('id='.rand(10,20));
         if( !$user ){
             echo "Ths user is not found";
             die;
         }
 
-        $user->email = "hello@bugbug.com";
+        $user->email = "hello".rand(0,100000)."@bugbug.com";
         $user->save();
     }
 
