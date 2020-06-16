@@ -6,7 +6,9 @@
             "email": "kind65505256@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "symfony/var-dumper": "^5.1"
+    },
     "autoload": {
         "psr-4": {
             "App\\" : "app/"

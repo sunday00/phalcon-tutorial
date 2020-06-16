@@ -2,9 +2,20 @@
 
 <h2>Now on <?=$count?></h2>
 <?php if (property_exists($one, 'id')) : ?>
-    <?=$one->id?> : <?=$one->email?>
+    <p class="text-primary"><?=$one->id?> : <?=$one->email?></p>
+    <p> <?php dump( $one->getProject('id > 3')->toArray() ) ?> </p>
 <?php endif; ?>
 <hr />
+
+<section class="container">
+
 <?php foreach ($all as $item) : ?>
-    <p><?=$item->email?></p>
+    <div><?=$item->id?> : <?=$item->email?>
+        <?php foreach ($item->project as $project): ?>
+        <p><?=$project->id?> : <?=$project->title?></p>
+        <?php endforeach ; ?>
+    </div>
+    <hr />
 <?php endforeach; ?>
+
+</section>

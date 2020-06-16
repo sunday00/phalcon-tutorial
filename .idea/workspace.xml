@@ -77,7 +77,7 @@
       <workItem from="1592123313021" duration="2520000" />
       <workItem from="1592154025282" duration="49000" />
       <workItem from="1592154088532" duration="2390000" />
-      <workItem from="1592234528214" duration="14936000" />
+      <workItem from="1592234528214" duration="18020000" />
     </task>
     <servers />
   </component>
@@ -97,6 +97,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="521" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1592307553750" />
+    <state x="374" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592314369835">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="374" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1592314369835" />
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592245547667">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -70,6 +70,9 @@ class User extends \Phalcon\Mvc\Model
             'field' => 'deleted',
             'value' => 1
         ]));
+
+        // localField, reference model, ref id
+        $this->hasMany('id', 'Project', 'user_id');
     }
 
     /**
