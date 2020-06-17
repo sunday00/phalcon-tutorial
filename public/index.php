@@ -2,8 +2,6 @@
 declare(strict_types=1);
 
 use Phalcon\Di\FactoryDefault;
-use Phalcon\Cache\AdapterFactory;
-use Phalcon\Mvc\Model\MetaData\Redis;
 
 error_reporting(E_ALL);
 
@@ -38,12 +36,23 @@ try {
      */
     $di['modelsMetadata'] = function () use ( $config ) {
         // Create a metadata manager with Redis
-        $metadata = new Redis( new AdapterFactory,
-            $config->modelsMetadata->toArray()
-        );
+        $metadata = new \Phalcon\Mvc\Model\MetaData\Redis( new \Phalcon\Cache\AdapterFactory, $config->redis->toArray() );
 
         return $metadata;
     };
+
+    /**
+     * Session share
+     */
+    $di->set('session', function () use ( $config ) {
+        $session = new \Phalcon\Session\Manager();
+        $factory = new \Phalcon\Storage\AdapterFactory( new \Phalcon\Storage\SerializerFactory );
+        $redis = new \Phalcon\Session\Adapter\Redis($factory, $config->redis->toArray());
+
+        $session->setAdapter($redis)->start();
+
+        return $session;
+    });
 
     /**
      * Include Autoloader
@@ -59,4 +68,5 @@ try {
 } catch (\Exception $e) {
     echo $e->getMessage() . '<br>';
     echo '<pre>' . $e->getTraceAsString() . '</pre>';
+    dump($e);
 }
