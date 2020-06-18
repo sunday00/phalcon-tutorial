@@ -81,7 +81,7 @@
       <workItem from="1592123313021" duration="2520000" />
       <workItem from="1592154025282" duration="49000" />
       <workItem from="1592154088532" duration="2390000" />
-      <workItem from="1592234528214" duration="25767000" />
+      <workItem from="1592234528214" duration="36359000" />
     </task>
     <servers />
   </component>
@@ -93,10 +93,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1592236589652" />
-    <state x="417" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592402286872">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592409300528">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="417" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1592402286872" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1592409300528" />
+    <state x="417" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592409575308">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="417" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1592409575308" />
     <state x="521" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1592307553750">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -117,10 +121,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1592402616984" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1592307123591">
+    <state x="221" y="89" key="SettingsEditor" timestamp="1592409524708">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1592307123591" />
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1592409524708" />
     <state x="397" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1592234571709">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

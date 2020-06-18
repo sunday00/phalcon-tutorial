@@ -1,7 +1,5 @@
 <?php
 
-require BASE_PATH . "/vendor/autoload.php";
-
 $loader = new \Phalcon\Loader();
 
 /**
@@ -9,7 +7,19 @@ $loader = new \Phalcon\Loader();
  */
 $loader->registerDirs(
     [
+        $config->application->routesDir,
         $config->application->controllersDir,
         $config->application->modelsDir
     ]
-)->register();
+);
+
+$loader->registerFiles([
+    BASE_PATH . "/vendor/autoload.php"
+]);
+
+$loader->registerNamespaces([
+    'App\Controllers' => '/app/controllers/',
+    'App\Models' => '/app/models/',
+]);
+
+$loader->register();

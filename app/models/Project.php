@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class Project extends \Phalcon\Mvc\Model
 {
 
@@ -40,7 +42,7 @@ class Project extends \Phalcon\Mvc\Model
     {
         $this->setSchema("practice");
         $this->setSource("projects");
-        $this->belongsTo('user_id', 'User', 'id', ['alias' => 'user']);
+        $this->belongsTo('user_id', User::class, 'id', ['alias' => 'user']);
     }
 
     /**

@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 use Phalcon\Di\FactoryDefault;
+use Phalcon\Mvc\Dispatcher;
 
 error_reporting(E_ALL);
 
@@ -21,15 +22,14 @@ try {
     include APP_PATH . '/config/services.php';
 
     /**
-     * Handle routes
-     */
-    include APP_PATH . '/config/router.php';
-
-    /**
      * Get config service for use in inline setup below
      */
     $config = $di->getConfig();
 
+    /**
+     * Include Autoloader
+     */
+    include APP_PATH . '/config/loader.php';
 
     /**
      * models metadata using redis
@@ -40,6 +40,22 @@ try {
 
         return $metadata;
     };
+
+    /**
+     * Prepare Namespace using
+     */
+    $di->set(
+        'dispatcher',
+        function () {
+            $dispatcher = new Dispatcher();
+
+            $dispatcher->setDefaultNamespace(
+                'App\Controllers'
+            );
+
+            return $dispatcher;
+        }
+    );
 
     /**
      * Session share
@@ -55,9 +71,9 @@ try {
     });
 
     /**
-     * Include Autoloader
+     * Handle routes
      */
-    include APP_PATH . '/config/loader.php';
+    include APP_PATH . '/config/router.php';
 
     /**
      * Handle the request

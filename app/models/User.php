@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 use Phalcon\Validation;
 use Phalcon\Validation\Validator\Email as EmailValidator;
 use Phalcon\Mvc\Model\Behavior\SoftDelete;
@@ -72,7 +74,7 @@ class User extends \Phalcon\Mvc\Model
         ]));
 
         // localField, reference model, ref id
-        $this->hasMany('id', 'Project', 'user_id');
+        $this->hasMany('id', Project::class, 'user_id', ['alias' => 'project']);
     }
 
     /**

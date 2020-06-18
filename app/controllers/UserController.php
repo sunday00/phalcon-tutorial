@@ -1,8 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Controllers;
+
+use App\Models\User;
+
 class UserController extends ControllerBase
 {
+
+//    protected $user;
+
+    public function initialize()
+    {
+//            $this->user = $user;
+    }
 
     public function indexAction()
     {
@@ -51,6 +62,21 @@ class UserController extends ControllerBase
         if( !$user ) die("no more user");
         $user->deleted = null;
         $user->save();
+    }
+
+    public function loginAction()
+    {
+
+    }
+
+    public function loginProcessAction()
+    {
+        dump($this->request->getPost(), $this->request->getPost('username'));
+    }
+
+    public function loginProcessGetAction()
+    {
+        dump($this->request->get(), $this->request->getQuery(/* key, required, 'default' */));
     }
 
 }
