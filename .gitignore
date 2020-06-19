@@ -1,0 +1,4 @@
+vendor
+cache
+app/config/config
+node_modules
