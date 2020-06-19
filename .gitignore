@@ -1,4 +1,4 @@
 vendor
 cache
-app/config/config
+app/config/config.php
 node_modules
