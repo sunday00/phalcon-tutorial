@@ -20,8 +20,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Member</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item" href="#">SignIn</a>
-                                <a class="dropdown-item" href="#">LogIn</a>
+                                <a class="dropdown-item" href="/auth/signUp">SignUp</a>
+                                <a class="dropdown-item" href="/auth/signIn">LogIn</a>
                             </div>
                         </li>
                     </ul>
