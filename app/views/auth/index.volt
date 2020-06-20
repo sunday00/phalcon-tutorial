@@ -1,7 +1,7 @@
 {% extends "layouts/common.volt" %}
 
 {% block contents %}
-    <form class="form-signin">
+    <form class="form-signin" action="/user/login" method="post">
         <img class="mb-4" src="https://api.adorable.io/avatars/130/abott@adorable.png" alt="placeholder" style="border-radius: 50%;">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label for="inputEmail" class="sr-only">Email address</label>

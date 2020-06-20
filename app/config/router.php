@@ -2,7 +2,7 @@
 
 $router = $di->getRouter();
 
-$router->add('/user/login', 'User::loginProcess')->via(['POST'])->setName('user-login');
+$router->add('/user/login', 'Auth::signIn')->via(['POST'])->setName('user-login');
 
 // $router->add()...;;
 

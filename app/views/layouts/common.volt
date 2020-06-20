@@ -20,8 +20,15 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Member</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item" href="/auth/signUp">SignUp</a>
-                                <a class="dropdown-item" href="/auth/signIn">LogIn</a>
+                                {% if session.get('role') %}
+                                    <form action="/auth/logout" method="post">
+                                        <input class="dropdown-item" type="submit" value="Logout" />
+                                    </form>
+                                    <a class="dropdown-item" href="/auth/info">Info</a>
+                                {% else %}
+                                    <a class="dropdown-item" href="/auth/signUp">SignUp</a>
+                                    <a class="dropdown-item" href="/auth/index">LogIn</a>
+                                {% endif %}
                             </div>
                         </li>
                     </ul>
@@ -33,4 +40,8 @@
 
 {% block contents %}
 
+{% endblock %}
+
+{% block msg %}
+    {{ flash.output() }}
 {% endblock %}

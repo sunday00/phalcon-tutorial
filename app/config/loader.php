@@ -7,19 +7,20 @@ $loader = new \Phalcon\Loader();
  */
 $loader->registerDirs(
     [
-        $config->application->routesDir,
         $config->application->controllersDir,
-        $config->application->modelsDir
+        $config->application->modelsDir,
     ]
 );
 
 $loader->registerFiles([
-    BASE_PATH . "/vendor/autoload.php"
+    BASE_PATH . "/vendor/autoload.php",
+    APP_PATH . "/config/acl.php",
 ]);
 
 $loader->registerNamespaces([
-    'App\Controllers' => '/app/controllers/',
-    'App\Models' => '/app/models/',
+    'App\Controllers'   => '/app/controllers/',
+    'App\Models'        => '/app/models/',
+    'App\Plugins'       => '/app/plugins/',
 ]);
 
 $loader->register();

@@ -11,5 +11,6 @@ class ControllerBase extends Controller
     public function initialize()
     {
         Tag::prependTitle('FireBall | ');
+
     }
 }
