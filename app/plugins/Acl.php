@@ -11,11 +11,13 @@ class Acl extends Memory
 {
     private $role;
     private $session;
+    private $flashSession;
     private $flash;
 
     public function __construct($di)
     {
         $this->session = $di->getShared('session');
+        $this->flashSession = $di->getShared('flashSession');
         $this->flash = $di->getShared('flash');
         $this->role = $this->session->get('role') ? $this->session->get('role') : 'guest';
         $this->setDefaultAction(Enum::DENY);
@@ -31,7 +33,12 @@ class Acl extends Memory
         $actionName = $dispatcher->getActionName();
 
         if( ! $this->isAllowed($this->role, $controllerName, $actionName) && !$this->session->get('role') ){
-            $this->flash->error("Permission denied");
+            if( $this->flashSession->has('error') ){
+                $this->flash->error( $this->flashSession->getMessages('error')[0] );
+            } else {
+                $this->flash->error("Permission denied");
+            }
+
             $dispatcher->forward([
                 'controller' => 'auth',
                 'action'     => 'index'
@@ -73,7 +80,7 @@ class Acl extends Memory
     {
         $this->allow('*', 'index', '*');
 
-        $this->allow('guest', 'auth', ['index', 'signIn']);
+        $this->allow('guest', 'auth', ['index', 'signIn', 'signUp', 'register']);
 
         $this->allow('member', 'auth', ['info', 'logout']);
 

@@ -44,4 +44,5 @@
 
 {% block msg %}
     {{ flash.output() }}
+    {{ flashSession.output() }}
 {% endblock %}

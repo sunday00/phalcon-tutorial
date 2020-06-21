@@ -5,6 +5,7 @@ use Phalcon\Mvc\Dispatcher;
 
 use Phalcon\Escaper;
 use Phalcon\Flash\Direct as Flash;
+use Phalcon\Flash\Session as FlashSession;
 use Phalcon\Mvc\Model\MetaData\Redis as MetaDataAdapter;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Php as PhpEngine;
@@ -40,6 +41,10 @@ $di->setShared('url', function () {
  */
 $di->setShared('view', function () {
     $config = $this->getConfig();
+
+    if ($config->mode == 'dev') {
+        array_map('unlink', array_filter( (array) glob(BASE_PATH."/cache/*.php")));
+    }
 
     $view = new View();
     $view->setDI($this);
@@ -104,6 +109,31 @@ $di->set('flash', function () {
     $escaper = new Escaper();
     $flash = new Flash($escaper);
     $flash->setImplicitFlush(false);
+    $flash->setCssClasses([
+        'error'   => 'alert alert-danger msg',
+        'success' => 'alert alert-success msg',
+        'notice'  => 'alert alert-info msg',
+        'warning' => 'alert alert-warning msg'
+    ]);
+
+    return $flash;
+});
+
+/**
+ * Register the session flash service with the Twitter Bootstrap classes
+ */
+$di->set('flashSession', function () {
+    $config = $this->getConfig();
+    $escaper = new Escaper();
+    $session = new SessionManager();
+
+    $factory = new AdapterFactory( new SerializerFactory );
+    $redis = new Redis($factory, $config->redis->toArray());
+
+    $session->setAdapter($redis)->start();
+
+    $session->setAdapter($redis);
+    $flash   = new FlashSession($escaper, $session);
     $flash->setCssClasses([
         'error'   => 'alert alert-danger msg',
         'success' => 'alert alert-success msg',
